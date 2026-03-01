@@ -1,0 +1,79 @@
+{
+  "season": "2026",
+  "kickoff": {
+    "date": "2026-03-26",
+    "date_display": "March 26, 2026",
+    "time": "7:00 – 8:00 PM",
+    "location": "Lehi Junior High Auditorium",
+    "address": "Lehi, UT"
+  },
+  "practices": {
+    "days": "Tuesdays & Thursdays",
+    "time": "6:00 – 8:00 AM",
+    "location": "TBD — posted in Spond"
+  },
+  "races": [
+    {
+      "name": "Beaver Mountain",
+      "date": "2026-08-22",
+      "date_display": "August 22, 2026",
+      "day": "Saturday",
+      "location": "Beaver Mountain Ski Resort",
+      "city": "Garden City, UT",
+      "start_time": "2:30 PM",
+      "notes": "Devo start time"
+    },
+    {
+      "name": "Richfield",
+      "date": "2026-09-05",
+      "date_display": "September 5, 2026",
+      "day": "Saturday",
+      "location": "Richfield",
+      "city": "Richfield, UT",
+      "start_time": "2:30 PM",
+      "notes": "Devo start time"
+    },
+    {
+      "name": "Panguitch",
+      "date": "2026-09-26",
+      "date_display": "September 26, 2026",
+      "day": "Saturday",
+      "location": "Panguitch Lake",
+      "city": "Panguitch, UT",
+      "start_time": "2:30 PM",
+      "notes": "Devo start time"
+    }
+  ],
+  "key_dates": [
+    {
+      "label": "Team Kickoff Meeting",
+      "date": "2026-03-26",
+      "date_display": "March 26, 2026",
+      "detail": "7:00 – 8:00 PM, Lehi Junior High Auditorium"
+    },
+    {
+      "label": "Registration Deadline",
+      "date": "2026-06-15",
+      "date_display": "June 15, 2026",
+      "detail": "Both team registration and NICA registration must be complete"
+    },
+    {
+      "label": "Kit Fitting",
+      "date": "2026-07-01",
+      "date_display": "July 2026",
+      "detail": "Date TBD — posted in Spond"
+    },
+    {
+      "label": "Team Breakfast",
+      "date": "2026-08-01",
+      "date_display": "August 2026",
+      "detail": "Date TBD — posted in Spond"
+    },
+    {
+      "label": "Practices Begin",
+      "date": "2026-06-01",
+      "date_display": "June 2026",
+      "detail": "Tuesdays & Thursdays, 6:00 – 8:00 AM"
+    }
+  ]
+}
