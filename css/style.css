@@ -235,12 +235,12 @@ strong { font-weight: 600; }
 .hero-logo-box {
   display: none;
   flex-shrink: 0;
-  width: 260px;
-  border: 2px solid var(--orange);
-  border-top: 4px solid var(--orange);
-  border-radius: 20px;
+  width: 360px;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-top: 3px solid var(--orange);
+  border-radius: 14px;
   background: rgba(255,255,255,0.03);
-  padding: 28px 24px 20px;
+  padding: 32px 28px 24px;
 }
 .hero-logo-box img { width: 100%; height: auto; display: block; }
 @media (min-width: 900px) {
