@@ -49,31 +49,49 @@
       "label": "Team Kickoff Meeting",
       "date": "2026-03-26",
       "date_display": "March 26, 2026",
-      "detail": "7:00 – 8:00 PM, Lehi Junior High Auditorium"
+      "detail": "7:00 – 8:00 PM · Lehi Junior High Auditorium"
     },
     {
-      "label": "Registration Deadline",
-      "date": "2026-06-15",
-      "date_display": "June 15, 2026",
-      "detail": "Both team registration and NICA registration must be complete"
+      "label": "NICA Registration Opens",
+      "date": "2026-03-30",
+      "date_display": "March 30, 2026",
+      "detail": "Register at utahmtb.org/registration"
     },
     {
-      "label": "Kit Fitting",
-      "date": "2026-07-01",
-      "date_display": "July 2026",
-      "detail": "Date TBD — posted in Spond"
+      "label": "Fit Kit Night",
+      "date": "2026-04-23",
+      "date_display": "April 23, 2026",
+      "detail": "3:00 – 6:00 PM MST"
     },
     {
-      "label": "Team Breakfast",
-      "date": "2026-08-01",
-      "date_display": "August 2026",
-      "detail": "Date TBD — posted in Spond"
+      "label": "Breakfast and Bike Fit",
+      "date": "2026-05-02",
+      "date_display": "May 2, 2026",
+      "detail": "8:00 – 10:00 AM MST"
     },
     {
       "label": "Practices Begin",
-      "date": "2026-06-01",
-      "date_display": "June 2026",
-      "detail": "Tuesdays & Thursdays, 6:00 – 8:00 AM"
+      "date": "2026-05-15",
+      "date_display": "Mid-May 2026",
+      "detail": "Tuesdays & Thursdays, 6:00 – 8:00 AM · location posted in Spond"
+    },
+    {
+      "label": "Race 1 — Beaver Mountain",
+      "date": "2026-08-22",
+      "date_display": "August 22, 2026",
+      "detail": "Devo start 2:30 PM · Garden City, UT"
+    },
+    {
+      "label": "Race 2 — Richfield",
+      "date": "2026-09-05",
+      "date_display": "September 5, 2026",
+      "detail": "Devo start 2:30 PM · Richfield, UT"
+    },
+    {
+      "label": "Race 3 — Panguitch",
+      "date": "2026-09-26",
+      "date_display": "September 26, 2026",
+      "detail": "Devo start 2:30 PM · Panguitch, UT"
     }
   ]
 }
