@@ -14,7 +14,7 @@
 
 (function () {
   var SEASON_JSON_URL =
-    "https://raw.githubusercontent.com/brandongsmitty/skyridge-jr-devo-website/main/content/season.json";
+    "https://raw.githubusercontent.com/skyridgejrdevo-ux/skyridge-jr-devo-website/main/content/season.json";
 
   var FALLBACK = {
     kickoff: "Check back soon for kickoff meeting details.",
