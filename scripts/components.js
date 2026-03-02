@@ -66,7 +66,7 @@
       <ul>
         <li><a href="/sponsorships.html">Sponsorships</a></li>
         <li><a href="/contact.html">Contact Us</a></li>
-        <li><a href="https://www.utahnica.org" target="_blank" rel="noopener">Utah NICA</a></li>
+        <li><a href="https://utahmtb.org/" target="_blank" rel="noopener">Utah MTB (UHSCL)</a></li>
         <li><a href="https://pitzone.nationalmtb.org" target="_blank" rel="noopener">PitZone</a></li>
       </ul>
     </div>
