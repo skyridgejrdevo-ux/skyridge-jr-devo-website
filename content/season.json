@@ -75,23 +75,5 @@
       "date_display": "Mid-May 2026",
       "detail": "Tuesdays & Thursdays, 6:00 – 8:00 AM · location posted in Spond"
     },
-    {
-      "label": "Race 1 — Beaver Mountain",
-      "date": "2026-08-22",
-      "date_display": "August 22, 2026",
-      "detail": "Devo start 2:30 PM · Garden City, UT"
-    },
-    {
-      "label": "Race 2 — Richfield",
-      "date": "2026-09-05",
-      "date_display": "September 5, 2026",
-      "detail": "Devo start 2:30 PM · Richfield, UT"
-    },
-    {
-      "label": "Race 3 — Panguitch",
-      "date": "2026-09-26",
-      "date_display": "September 26, 2026",
-      "detail": "Devo start 2:30 PM · Panguitch, UT"
-    }
   ]
 }
