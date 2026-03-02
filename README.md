@@ -4,7 +4,7 @@ Public website for **Skyridge Junior Devo** — a non-profit youth mountain bike
 7th and 8th graders in Lehi, Utah competing in the Utah NICA league.
 
 Live site: [skyridgejrdevo.com](https://skyridgejrdevo.com)
-Hosted on: Webflow (Basic plan)
+Hosted on: **Netlify** (free tier, static HTML, auto-deploys from `main`)
 
 ---
 
@@ -12,11 +12,24 @@ Hosted on: Webflow (Basic plan)
 
 ```
 skyridge-jr-devo-website/
+├── index.html              # Home
+├── about.html              # About / FAQ
+├── sponsorships.html       # Sponsorships
+├── registration.html       # Registration (Netlify Form)
+├── ride-leaders.html       # Ride Leaders / Volunteer
+├── rules.html              # Rules & Expectations
+├── contact.html            # Contact / Coaching Staff
+├── css/
+│   └── style.css           # All styles — mobile-first, brand colors, responsive
 ├── scripts/
-│   └── season-embed.js   # Injected into Webflow; fetches season.json at page load
+│   ├── season-embed.js     # Fetches season.json, injects dynamic content into pages
+│   └── components.js       # Injects shared nav + footer into every page
+├── assets/
+│   └── images/             # Logo, team photos, sponsor logos
 ├── content/
-│   └── season.json       # Source of truth for race schedule, practices, key dates
-├── .gitignore
+│   ├── season.json         # Source of truth for race schedule, practices, key dates
+│   └── page-copy.md        # Reference copy document (not served to users)
+├── netlify.toml            # Netlify config (redirects, security headers)
 └── README.md
 ```
 
@@ -24,14 +37,12 @@ skyridge-jr-devo-website/
 
 ## How to Update Season Data
 
-All dynamic content on the live site — race schedule, practice times, kickoff info, key
-dates — is driven by `content/season.json`. **No Webflow access required** to update it.
+All dynamic content — race schedule, practice times, kickoff info, key dates — is driven
+by `content/season.json`. **No platform access required** to update it.
 
-### Steps
-
-1. Edit `content/season.json` in this repo (GitHub web UI or locally).
-2. Commit and push to `main`.
-3. The live site reflects changes on the next page load. No redeploy needed.
+1. Edit `content/season.json` in this repo (GitHub web UI or locally)
+2. Commit and push to `main`
+3. The live site reflects changes on the next page load — no redeploy needed
 
 ### season.json Fields
 
@@ -39,95 +50,87 @@ dates — is driven by `content/season.json`. **No Webflow access required** to 
 |-------|-------------|
 | `season` | Year string, e.g. `"2026"` |
 | `kickoff.date_display` | Human-readable date shown on site |
-| `kickoff.time` | Time string, e.g. `"7:00 – 8:00 PM"` |
+| `kickoff.time` | Time string |
 | `kickoff.location` | Venue name |
 | `practices.days` | e.g. `"Tuesdays & Thursdays"` |
 | `practices.time` | e.g. `"6:00 – 8:00 AM"` |
 | `practices.location` | e.g. `"TBD — posted in Spond"` |
-| `races[]` | Array of race objects (see below) |
-| `key_dates[]` | Array of key date objects (see below) |
-
-**Race object:**
-```json
-{
-  "name": "Beaver Mountain",
-  "date": "2026-08-22",
-  "date_display": "August 22, 2026",
-  "location": "Beaver Mountain Ski Resort",
-  "city": "Garden City, UT",
-  "start_time": "2:30 PM"
-}
-```
-
-**Key date object:**
-```json
-{
-  "label": "Kit Fitting",
-  "date": "2026-07-15",
-  "date_display": "July 15, 2026",
-  "detail": "Time and location TBD — check Spond"
-}
-```
-
-> The `date` field (ISO format `YYYY-MM-DD`) is used to filter out past dates automatically.
-> The `date_display` field is what's shown to visitors.
+| `races[]` | Array of race objects |
+| `key_dates[]` | Array of key date objects |
 
 ---
 
-## How the Embed Script Works
+## Dynamic Content IDs
 
-`scripts/season-embed.js` is a single self-contained vanilla JavaScript file with no
-dependencies. It is loaded from the GitHub raw content URL via a `<script>` tag added to
-Webflow's project-level custom code (Footer section).
+`scripts/season-embed.js` looks for these element IDs and injects content:
 
-On page load, it:
-1. Fetches `season.json` from GitHub raw content
-2. Finds HTML elements by ID on the current page
-3. Injects formatted content into those elements
-4. Falls back to placeholder text if the fetch fails
-
-### HTML Element IDs (add these to Webflow sections)
-
-| ID | Content injected | Pages |
-|----|-----------------|-------|
-| `race-schedule` | Race schedule table | Home, Registration |
-| `kickoff-meeting` | Kickoff date, time, location | Home |
-| `practice-schedule` | Practice days and times | Home, About |
-| `key-dates` | Upcoming key dates list | Registration |
-
-### Adding the Script to Webflow
-
-1. In Webflow: **Project Settings → Custom Code → Footer Code**
-2. Paste the following `<script>` tag:
-
-```html
-<script src="https://raw.githubusercontent.com/brandongsmitty/skyridge-jr-devo-website/main/scripts/season-embed.js"></script>
-```
-
-> **Note:** If GitHub raw content is blocked by CSP in production, host the script via
-> jsDelivr CDN instead:
-> ```html
-> <script src="https://cdn.jsdelivr.net/gh/brandongsmitty/skyridge-jr-devo-website@main/scripts/season-embed.js"></script>
-> ```
-> jsDelivr is recommended for production — it caches the file at the CDN edge and is
-> more reliable than raw.githubusercontent.com for end users.
+| ID | Content | Pages |
+|----|---------|-------|
+| `#race-schedule` | Race schedule table | Home, Registration |
+| `#kickoff-meeting` | Kickoff date, time, location | Home |
+| `#practice-schedule` | Practice days and times | Home, About |
+| `#key-dates` | Upcoming key dates list (past dates hidden) | Registration |
 
 ---
 
-## Relationship to Internal Coaching Tools
+## Shared Nav & Footer
 
-The internal coaching tools repo (`skyridge-jr-devo`, hosted on GitHub Pages + Firebase)
-is **separate** and **not affected** by changes to this repo. This repo contains only the
-public-facing website assets.
+`scripts/components.js` writes the nav and footer HTML into `<div id="site-nav">` and
+`<div id="site-footer">` on every page. To update the nav or footer across all pages,
+edit `components.js` — one file, all 7 pages update instantly.
 
-When updating race schedule or dates, you may want to keep both in sync:
-- This repo: `content/season.json` (public site)
-- Internal repo: Firebase season data (coaching tools)
+---
+
+## Registration Form
+
+The registration form on `registration.html` uses **Netlify Forms** (`data-netlify="true"`).
+No backend required — Netlify captures submissions.
+
+**One-time setup after deploy:**
+1. Netlify dashboard → Site Settings → Forms
+2. Add email notification → skyridgejrdevo@gmail.com
+3. Done — all submissions email to the coaching staff
+
+---
+
+## Netlify Deployment (one-time setup)
+
+1. Go to [netlify.com](https://netlify.com) → "Add new site" → "Import from Git"
+2. Select the `skyridge-jr-devo-website` repo
+3. Build settings: **leave blank** (no build command, publish directory = `.`)
+4. Click Deploy
+5. Site is live at a `[random].netlify.app` URL
+
+### Custom Domain (skyridgejrdevo.com)
+
+1. Netlify dashboard → Site Settings → Domain management → Add custom domain
+2. Enter `skyridgejrdevo.com`
+3. At your domain registrar, update DNS:
+   - **A record** `@` → Netlify load balancer IP (shown in Netlify after adding domain)
+   - **CNAME** `www` → `[your-site].netlify.app`
+4. SSL provisions automatically (Let's Encrypt) — takes ~10 min
+
+---
+
+## Making Content Changes
+
+**Season data** (races, practices, dates): Edit `content/season.json`
+
+**Page content**: Edit the relevant `.html` file directly
+
+**Nav/footer**: Edit `scripts/components.js` — changes apply to all 7 pages
+
+**Styles**: Edit `css/style.css`
+
+**Sponsor logos**: Add PNG files to `assets/images/` and update `index.html`
+
+All changes: commit + push to `main` → Netlify auto-deploys in ~30 seconds.
 
 ---
 
 ## Brand Guidelines
 
-- Primary accent color: `#F26A1B` (orange)
-- Logo: `skyridge_jr-devo_logo.png` (available in the internal tools repo under `assets/images/`)
-- Typography: Barlow Condensed or Montserrat for headers; clean sans-serif for body
+- Primary accent: `#F26A1B` (orange)
+- Dark backgrounds: `#1a1a1a`
+- Logo: `assets/images/skyridge_jr-devo_logo.png`
+- Fonts: Barlow Condensed (headers) + Inter (body) via Google Fonts

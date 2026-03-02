@@ -1,0 +1,60 @@
+# Netlify configuration for skyridge-jr-devo-website
+# Plain static HTML — no build command needed.
+
+[build]
+  publish = "."
+
+# Form notifications — configure in Netlify UI after deploy:
+#   Site Settings → Forms → Form notifications → Email skyridgejrdevo@gmail.com
+
+# Redirect www → apex domain
+[[redirects]]
+  from = "https://www.skyridgejrdevo.com/*"
+  to   = "https://skyridgejrdevo.com/:splat"
+  status = 301
+  force  = true
+
+# Registration form success redirect
+[[redirects]]
+  from = "/registration-success"
+  to   = "/registration.html?success=true"
+  status = 200
+
+# Pretty URLs: /about → /about.html
+[[redirects]]
+  from = "/about"
+  to   = "/about.html"
+  status = 200
+
+[[redirects]]
+  from = "/sponsorships"
+  to   = "/sponsorships.html"
+  status = 200
+
+[[redirects]]
+  from = "/registration"
+  to   = "/registration.html"
+  status = 200
+
+[[redirects]]
+  from = "/ride-leaders"
+  to   = "/ride-leaders.html"
+  status = 200
+
+[[redirects]]
+  from = "/rules"
+  to   = "/rules.html"
+  status = 200
+
+[[redirects]]
+  from = "/contact"
+  to   = "/contact.html"
+  status = 200
+
+# Security headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
