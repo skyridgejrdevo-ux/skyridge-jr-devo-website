@@ -227,6 +227,24 @@ strong { font-weight: 600; }
 .hero-inner {
   position: relative;
   z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+.hero-content { flex: 1; min-width: 0; }
+.hero-logo-box {
+  display: none;
+  flex-shrink: 0;
+  width: 260px;
+  border: 2px solid var(--orange);
+  border-top: 4px solid var(--orange);
+  border-radius: 20px;
+  background: rgba(255,255,255,0.03);
+  padding: 28px 24px 20px;
+}
+.hero-logo-box img { width: 100%; height: auto; display: block; }
+@media (min-width: 900px) {
+  .hero-logo-box { display: block; }
 }
 .hero-eyebrow {
   display: inline-block;
