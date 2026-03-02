@@ -39,10 +39,18 @@
   function injectPractices(data, el) {
     var p = data.practices;
     if (!p) { el.textContent = FALLBACK.practices; return; }
-    el.innerHTML =
-      "<strong>" + p.days + "</strong><br>" +
-      p.time + "<br>" +
-      "<span class='practice-location'>" + p.location + "</span>";
+    var html = "<strong>" + p.days + "</strong><br>";
+    if (p.begin_display) {
+      html += "Begins " + p.begin_display + "<br>";
+    }
+    if (p.time_may && p.time_summer) {
+      html += "<span class='practice-time'>May (school in session): " + p.time_may + "</span><br>" +
+              "<span class='practice-time'>Summer: " + p.time_summer + "</span><br>";
+    } else if (p.time) {
+      html += p.time + "<br>";
+    }
+    html += "<span class='practice-location'>" + p.location + "</span>";
+    el.innerHTML = html;
   }
 
   function injectRaceSchedule(data, el) {
@@ -86,15 +94,15 @@
       return;
     }
 
-    var html = '<ul class="key-dates-list">';
+    var html = '<div class="key-dates-grid">';
     upcoming.forEach(function (d) {
-      html += "<li>" +
-        "<strong>" + d.label + "</strong> — " +
-        fmt(d.date_display) +
-        (d.detail ? "<br><span class='key-date-detail'>" + d.detail + "</span>" : "") +
-        "</li>";
+      html += "<div class='key-date-card'>" +
+        "<div class='key-date-label'>" + d.label + "</div>" +
+        "<div class='key-date-date'>" + fmt(d.date_display) + "</div>" +
+        (d.detail ? "<div class='key-date-detail'>" + d.detail + "</div>" : "") +
+        "</div>";
     });
-    html += "</ul>";
+    html += "</div>";
     el.innerHTML = html;
   }
 

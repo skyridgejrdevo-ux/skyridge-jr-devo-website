@@ -9,7 +9,9 @@
   },
   "practices": {
     "days": "Tuesdays & Thursdays",
-    "time": "6:00 – 8:00 AM",
+    "begin_display": "Mid-May 2026",
+    "time_may": "6:00 – 7:30 PM",
+    "time_summer": "6:00 – 8:00 AM",
     "location": "TBD — posted in Spond"
   },
   "races": [
@@ -46,12 +48,6 @@
   ],
   "key_dates": [
     {
-      "label": "Team Kickoff Meeting",
-      "date": "2026-03-26",
-      "date_display": "March 26, 2026",
-      "detail": "7:00 – 8:00 PM · Lehi Junior High Auditorium"
-    },
-    {
       "label": "NICA Registration Opens",
       "date": "2026-03-30",
       "date_display": "March 30, 2026",
@@ -68,12 +64,6 @@
       "date": "2026-05-02",
       "date_display": "May 2, 2026",
       "detail": "8:00 – 10:00 AM MST"
-    },
-    {
-      "label": "Practices Begin",
-      "date": "2026-05-15",
-      "date_display": "Mid-May 2026",
-      "detail": "Tuesdays & Thursdays, 6:00 – 8:00 AM · location posted in Spond"
     }
   ]
 }
