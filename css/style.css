@@ -828,11 +828,14 @@ strong { font-weight: 600; }
 }
 .sponsor-featured-wrap {
   display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
   justify-content: center;
-  margin-bottom: 24px;
+  align-items: center;
+  margin-bottom: 40px;
 }
 .sponsor-slot--hero {
-  width: min(360px, 100%);
+  width: min(320px, 100%);
   aspect-ratio: 3 / 2;
   background: #ffffff;
   border: 2px solid var(--accent);
@@ -847,6 +850,9 @@ strong { font-weight: 600; }
   max-height: 100%;
   object-fit: contain;
   display: block;
+}
+.sponsor-featured-wrap .sponsor-slot {
+  width: min(220px, 100%);
 }
 .sponsor-section-label {
   font-size: 0.8rem;
