@@ -134,3 +134,4 @@ All changes: commit + push to `main` → Netlify auto-deploys in ~30 seconds.
 - Dark backgrounds: `#1a1a1a`
 - Logo: `assets/images/skyridge_jr-devo_logo.png`
 - Fonts: Barlow Condensed (headers) + Inter (body) via Google Fonts
+<!-- deploy trigger -->
