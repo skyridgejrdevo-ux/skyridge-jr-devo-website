@@ -8,18 +8,25 @@
 
 /* ----- Custom Properties ----- */
 :root {
-  --orange: #F26A1B;
-  --orange-dark: #d45a0f;
+  /* --- Skyridge Brand Colors (Style Guide) --- */
+  --orange: #E74302;           /* SKYRIDGE (Burnt) Orange — primary */
+  --orange-secondary: #f68026; /* Orange — secondary brand */
+  --orange-dark: #c43202;      /* Darker orange for hover/active states */
+  --steel-grey: #606972;       /* Steel Grey */
+  --graphite-grey: #344d5a;    /* Graphite Grey */
+  --gray: #cdd4d8;             /* Gray */
+
+  /* --- UI / Layout Colors --- */
   --dark: #1a1a1a;
   --dark-2: #242424;
   --dark-3: #2e2e2e;
-  --mid: #444;
-  --light-border: #e0e0e0;
+  --mid: #606972;              /* mapped to Steel Grey */
+  --light-border: #cdd4d8;     /* mapped to brand Gray */
   --text-dark: #1a1a1a;
-  --text-muted: #666;
-  --text-light: #F5F0EB;
-  --white: #F5F0EB;
-  --gray-section: #F0ECE7;
+  --text-muted: #606972;       /* mapped to Steel Grey */
+  --text-light: #ffffff;
+  --white: #ffffff;
+  --gray-section: #eef0f2;     /* light tint of brand Gray */
   --nav-height: 64px;
   --max-width: 1100px;
   --radius: 6px;
@@ -143,7 +150,7 @@ strong { font-weight: 600; }
 }
 .nav-links a:hover {
   color: var(--white);
-  background: rgba(242,106,27,0.12);
+  background: rgba(231,67,2,0.12);
 }
 .nav-links a.active {
   color: var(--white);
@@ -221,7 +228,7 @@ strong { font-weight: 600; }
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(242,106,27,0.08) 0%, transparent 60%);
+  background: linear-gradient(135deg, rgba(231,67,2,0.08) 0%, transparent 60%);
   pointer-events: none;
 }
 .hero-inner {
@@ -377,7 +384,7 @@ strong { font-weight: 600; }
 }
 .tier-card.orange-tier {
   border-color: var(--orange);
-  background: rgba(242,106,27,0.06);
+  background: rgba(231,67,2,0.06);
 }
 .tier-card.grey-tier {
   border-color: #bbb;
@@ -443,7 +450,7 @@ strong { font-weight: 600; }
 /* Certification level cards */
 .cert-card {
   border-left: 4px solid var(--orange);
-  background: #fff8f4;
+  background: rgba(231,67,2,0.04);
   border-radius: 0 var(--radius) var(--radius) 0;
   padding: 24px 24px 24px 20px;
 }
@@ -470,8 +477,8 @@ strong { font-weight: 600; }
   .season-snapshot { grid-template-columns: repeat(2, 1fr); }
 }
 .snapshot-card {
-  background: rgba(242,106,27,0.07);
-  border: 1px solid rgba(242,106,27,0.25);
+  background: rgba(231,67,2,0.07);
+  border: 1px solid rgba(231,67,2,0.25);
   border-radius: var(--radius);
   padding: 20px 22px;
 }
@@ -532,8 +539,8 @@ strong { font-weight: 600; }
   .key-dates-grid { grid-template-columns: repeat(2, 1fr); }
 }
 .key-date-card {
-  background: rgba(242,106,27,0.07);
-  border: 1px solid rgba(242,106,27,0.25);
+  background: rgba(231,67,2,0.07);
+  border: 1px solid rgba(231,67,2,0.25);
   border-radius: var(--radius);
   padding: 24px 28px;
   line-height: 1.5;
@@ -729,8 +736,8 @@ strong { font-weight: 600; }
 
 /* ----- RATIO CALLOUT ----- */
 .ratio-callout {
-  background: rgba(242,106,27,0.08);
-  border: 2px solid rgba(242,106,27,0.3);
+  background: rgba(231,67,2,0.08);
+  border: 2px solid rgba(231,67,2,0.3);
   border-radius: var(--radius);
   padding: 28px 32px;
   text-align: center;
@@ -784,7 +791,7 @@ strong { font-weight: 600; }
 
 /* ----- HIGHLIGHT BOX ----- */
 .highlight-box {
-  background: rgba(242,106,27,0.08);
+  background: rgba(231,67,2,0.08);
   border-left: 4px solid var(--orange);
   border-radius: 0 var(--radius) var(--radius) 0;
   padding: 16px 20px;
