@@ -826,6 +826,10 @@ strong { font-weight: 600; }
   object-fit: contain;
   display: block;
 }
+.sponsor-slot--featured {
+  grid-column: span 2;
+  aspect-ratio: 6 / 2;
+}
 
 /* ----- FOOTER ----- */
 #site-footer {
