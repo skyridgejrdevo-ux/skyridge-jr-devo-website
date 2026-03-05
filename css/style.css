@@ -787,7 +787,7 @@ strong { font-weight: 600; }
 }
 .contact-box h3 { color: var(--white); margin-bottom: 16px; }
 .contact-box p { color: #ccc; font-size: 0.95rem; margin-bottom: 8px; }
-.contact-box a { color: var(--orange); }
+.contact-box a:not(.btn) { color: var(--orange); }
 
 /* ----- HIGHLIGHT BOX ----- */
 .highlight-box {
