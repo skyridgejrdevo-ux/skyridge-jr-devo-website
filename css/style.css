@@ -826,9 +826,42 @@ strong { font-weight: 600; }
   object-fit: contain;
   display: block;
 }
-.sponsor-slot--featured {
-  grid-column: span 2;
-  aspect-ratio: 6 / 2;
+.sponsor-featured-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.sponsor-slot--hero {
+  width: min(320px, 100%);
+  aspect-ratio: 3 / 2;
+  background: #ffffff;
+  border: 2px solid var(--accent);
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 32px;
+}
+.sponsor-slot--hero img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+}
+.sponsor-featured-wrap .sponsor-slot {
+  width: min(220px, 100%);
+}
+.sponsor-section-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  text-align: center;
+  margin-bottom: 16px;
 }
 
 /* ----- FOOTER ----- */
