@@ -15,7 +15,7 @@
   <div class="nav-inner">
     <a href="/" class="nav-logo">
       <img src="/assets/images/skyridge_jr-devo_logo.png" alt="Skyridge Jr Devo logo">
-      <span>Skyridge Jr Devo<em>Lehi, Utah · NICA</em></span>
+      <span>Skyridge Jr Devo</span>
     </a>
     <div class="nav-links">
       <a href="/">Home</a>
