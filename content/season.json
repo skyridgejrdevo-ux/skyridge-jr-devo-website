@@ -4,7 +4,7 @@
     "date": "2026-03-26",
     "date_display": "March 26, 2026",
     "time": "7:00 – 8:00 PM",
-    "location": "Lehi Junior High Auditorium",
+    "location": "<a href=\"https://maps.app.goo.gl/WJx1xUJaeUyxytey5\" target=\"_blank\" rel=\"noopener\">Lehi Junior High Auditorium</a>",
     "address": "Lehi, UT"
   },
   "practices": {
@@ -57,13 +57,13 @@
       "label": "Fit Kit Night",
       "date": "2026-04-23",
       "date_display": "April 23, 2026",
-      "detail": "3:00 – 6:00 PM MST"
+      "detail": "3:00 – 6:00 PM MST — <a href=\"https://maps.app.goo.gl/uYuhckt1LKCKASqg9\" target=\"_blank\" rel=\"noopener\">Bike Peddler, 3600 Ashton Blvd, Lehi</a>"
     },
     {
-      "label": "Breakfast and Bike Fit",
+      "label": "Breakfast and Bike Check",
       "date": "2026-05-02",
       "date_display": "May 2, 2026",
-      "detail": "8:00 – 10:00 AM MST"
+      "detail": "8:00 – 10:00 AM MST — <a href=\"https://maps.app.goo.gl/amdfHRLGfV2Gs31B8\" target=\"_blank\" rel=\"noopener\">View Location</a>"
     }
   ]
 }
