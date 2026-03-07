@@ -188,91 +188,18 @@
       <h2>Registration Form</h2>
       <p>Fill out the form below to register your rider. A coach will follow up within 48 hours.</p>
     </div>
-
-    <div style="max-width:760px;">
-      <form name="registration" method="POST" action="/registration-success" data-netlify="true" netlify-honeypot="bot-field" id="reg-form">
-        <input type="hidden" name="form-name" value="registration">
-        <!-- honeypot -->
-        <p style="display:none;">
-          <label>Don't fill this out: <input name="bot-field"></label>
-        </p>
-
-        <div class="form-grid">
-          <div class="form-group">
-            <label for="rider-first">Rider First Name <span class="form-required">*</span></label>
-            <input type="text" id="rider-first" name="rider-first" required autocomplete="given-name">
-          </div>
-          <div class="form-group">
-            <label for="rider-last">Rider Last Name <span class="form-required">*</span></label>
-            <input type="text" id="rider-last" name="rider-last" required autocomplete="family-name">
-          </div>
-          <div class="form-group">
-            <label for="grade">Current Grade <span class="form-required">*</span></label>
-            <select id="grade" name="grade" required>
-              <option value="">Select grade</option>
-              <option value="7th">7th Grade</option>
-              <option value="8th">8th Grade</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="school">Current School <span class="form-required">*</span></label>
-            <input type="text" id="school" name="school" required placeholder="e.g. Lehi Junior High">
-          </div>
-          <div class="form-group">
-            <label for="parent-name">Parent/Guardian Name <span class="form-required">*</span></label>
-            <input type="text" id="parent-name" name="parent-name" required autocomplete="name">
-          </div>
-          <div class="form-group">
-            <label for="parent-email">Parent/Guardian Email <span class="form-required">*</span></label>
-            <input type="email" id="parent-email" name="parent-email" required autocomplete="email">
-          </div>
-          <div class="form-group">
-            <label for="parent-phone">Parent/Guardian Phone <span class="form-required">*</span></label>
-            <input type="tel" id="parent-phone" name="parent-phone" required autocomplete="tel">
-          </div>
-          <div class="form-group">
-            <label for="emergency-name">Emergency Contact Name <span class="form-required">*</span></label>
-            <input type="text" id="emergency-name" name="emergency-name" required>
-          </div>
-          <div class="form-group">
-            <label for="emergency-phone">Emergency Contact Phone <span class="form-required">*</span></label>
-            <input type="tel" id="emergency-phone" name="emergency-phone" required>
-          </div>
-          <div class="form-group">
-            <label for="bike-type">Rider's Bike Type</label>
-            <input type="text" id="bike-type" name="bike-type" placeholder="e.g. 26" hardtail mountain bike">
-          </div>
-          <div class="form-group full-width">
-            <label for="experience">Prior Racing Experience</label>
-            <select id="experience" name="experience">
-              <option value="">Select</option>
-              <option value="none">None</option>
-              <option value="school-sport">School sport (non-cycling)</option>
-              <option value="nica">NICA / mountain bike racing</option>
-              <option value="other">Other</option>
-            </select>
-          </div>
-          <div class="form-group full-width checkbox-group">
-            <input type="checkbox" id="financial-assistance" name="financial-assistance" value="yes">
-            <label for="financial-assistance">I would like to inquire about financial assistance</label>
-          </div>
-          <div class="form-group full-width">
-            <label for="notes">Additional Notes (optional)</label>
-            <textarea id="notes" name="notes" placeholder="Anything else you'd like us to know"></textarea>
-          </div>
-        </div>
-
-        <div class="form-submit-wrap mt-24">
-          <button type="submit" class="btn btn-primary">Submit Registration</button>
-        </div>
-      </form>
-
-      <!-- Success message (shown after Netlify redirect or JS submission) -->
-      <div id="form-success" class="form-success mt-24">
-        <strong>Thanks! We'll be in touch within 48 hours</strong> with next steps and payment info.
-        Make sure to complete Step 2 (NICA registration) at
-        <a href="https://pitzone.nationalmtb.org" target="_blank" rel="noopener">pitzone.nationalmtb.org</a>.
-      </div>
+    <div style="max-width:760px; margin:0 auto;">
+      <iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLScJWC9m8nOBVDr_Dz0TxQKN6e5AZLrfE1j7LZjyYJ66ZkD3Ag/viewform?embedded=true"
+        width="100%"
+        height="1800"
+        frameborder="0"
+        marginheight="0"
+        marginwidth="0"
+        title="2026 Season Registration Form"
+        style="border:none; display:block;">
+        Loading…
+      </iframe>
     </div>
   </div>
 </section>
@@ -281,13 +208,5 @@
 
 <script src="/scripts/components.js"></script>
 <script src="/scripts/season-embed.js"></script>
-<script>
-  // Show success message if redirected back with ?success=true
-  if (window.location.search.includes('success=true')) {
-    document.getElementById('reg-form').style.display = 'none';
-    var msg = document.getElementById('form-success');
-    if (msg) { msg.style.display = 'block'; }
-  }
-</script>
 </body>
 </html>
