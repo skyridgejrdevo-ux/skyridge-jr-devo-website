@@ -250,6 +250,29 @@ strong { font-weight: 600; }
   padding: 40px 36px 28px;
 }
 .hero-logo-box img { width: 100%; height: auto; display: block; }
+.hero-chant {
+  margin-top: 20px;
+  text-align: center;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 1.4;
+}
+.hero-chant p {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.55);
+  margin: 0 0 4px;
+}
+.hero-chant p span {
+  color: #fff;
+}
+.hero-chant-finale {
+  font-size: 1.35rem !important;
+  color: var(--orange) !important;
+  letter-spacing: 0.12em;
+  margin-top: 8px !important;
+}
 @media (min-width: 900px) {
   .hero-logo-box { display: block; }
 }
