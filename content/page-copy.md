@@ -147,18 +147,15 @@ Any student currently enrolled in 7th or 8th grade who:
 
 ### Fees & Costs
 
-**Team fee: $200**
-Covers coaching, equipment maintenance, insurance, and team expenses.
+**Team fee: $290 — includes Racing Kit (jersey, bib, t-shirt, hat, hoodie & socks)**
+Covers coaching, equipment maintenance, insurance, team expenses, and Racing Kit.
 
 **NICA registration: ~$90**
 Paid directly to NICA through PitZone. Required for all racers.
 
-**Kit (team jersey + shorts): ~$100–$130**
-Ordered through the team — optional for training, required for races.
-
 **Race entry fees:** Included in NICA registration.
 
-**Total estimated cost: ~$390–$420 per athlete**
+**Total estimated cost: ~$380 per athlete**
 
 *Financial assistance is available — contact a coach if cost is a barrier.*
 
@@ -346,7 +343,7 @@ can participate in practices or races.
 
 Register with the Skyridge Junior Devo team directly.
 
-**Team fee: $200**
+**Team fee: $290 — includes Racing Kit (jersey, bib, t-shirt, hat, hoodie & socks)**
 
 1. Fill out the registration form below *(Webflow Form — see form fields at bottom of this page)*
 2. A coach will follow up with payment instructions
