@@ -920,9 +920,9 @@ strong { font-weight: 600; }
   margin-bottom: 16px;
 }
 
-/* Title sponsor grid — 3 equal columns, collapses to 1 on mobile */
+/* Title sponsor grid — 2 equal columns, collapses to 1 on mobile */
 .sponsor-grid--title {
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   margin-bottom: 20px;
 }
 @media (max-width: 559px) { .sponsor-grid--title { grid-template-columns: 1fr; } }
