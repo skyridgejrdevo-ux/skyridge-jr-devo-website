@@ -930,6 +930,24 @@ strong { font-weight: 600; }
   width: 100%;
 }
 
+/* Supporting sponsors — always 3-col, collapses to 1 on mobile */
+.sponsor-grid--3col { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 559px) { .sponsor-grid--3col { grid-template-columns: 1fr; } }
+
+/* Past sponsors — flex wrap so partial last row is centered */
+.sponsor-grid--center-last {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.sponsor-grid--center-last .sponsor-slot { flex: 0 0 calc(25% - 15px); }
+@media (max-width: 899px) {
+  .sponsor-grid--center-last .sponsor-slot { flex-basis: calc(33.33% - 14px); }
+}
+@media (max-width: 559px) {
+  .sponsor-grid--center-last .sponsor-slot { flex-basis: calc(50% - 10px); }
+}
+
 /* Bike Peddler slot: logo left, QR codes stacked right */
 .sponsor-slot--with-qr {
   display: flex;
